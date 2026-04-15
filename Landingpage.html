@@ -1,0 +1,89 @@
+<!DOCTYPE html><html>
+<head>
+    <title>Responsive Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
+    /* Basic CSS */
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+
+    /* Navbar styling */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: transparent;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    /* Hover effect */
+    .navbar a:hover {
+        color: yellow;
+    }
+
+    /* Change color on scroll */
+    .changeColor {
+        background-color: black;
+    }
+
+    /* Main section */
+    .section {
+        height: 100vh;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        color: white;
+    }
+
+    .content {
+        height: 1000px;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+
+</head><body><!-- Navbar -->
+<div class="navbar" id="nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- Landing Section -->
+<div class="section">
+    My Landing Page
+</div>
+
+<!-- Content -->
+<div class="content">
+    <h2>Scroll Down</h2>
+    <p>This is my project for responsive landing page.</p>
+</div>
+
+<script>
+    // JavaScript for scroll effect
+    window.onscroll = function() {
+        var navbar = document.getElementById("nav");
+
+        if (window.pageYOffset > 50) {
+            navbar.classList.add("changeColor");
+        } else {
+            navbar.classList.remove("changeColor");
+        }
+    }
+</script>
+
+</body>
+</html>
